@@ -14,261 +14,15 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <style>
-        /* ---------- ROOT & GLOBAL ---------- */
-        body {
-            background-color: #0f172a;
-            color: #f1f5f9;
-            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .navbar {
-            background: rgba(10, 25, 47, 0.85);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid #1e3a5f;
-        }
-
-        .navbar-brand {
-            letter-spacing: 1px;
-        }
-
-        .nav-link {
-            color: #e2e8f0 !important;
-            margin: 0 6px;
-            font-weight: 400;
-            transition: 0.2s;
-        }
-
-        .nav-link:hover {
-            color: #0d6efd !important;
-        }
-
-        /* ---------- HERO ---------- */
-        .hero {
-            height: 100vh;
-            background: radial-gradient(circle at 70% 30%, #1a2a44, #0b1622);
-        }
-
-        .profile-img {
-            width: 180px;
-            border-radius: 50%;
-            border: 4px solid #0d6efd;
-            box-shadow: 0 0 35px rgba(13, 110, 253, 0.5);
-            transition: transform 0.4s;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.02);
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 24px;
-            margin: 0 12px;
-            transition: 0.25s;
-            display: inline-block;
-        }
-
-        .social-icons a:hover {
-            color: #0d6efd;
-            transform: scale(1.3) translateY(-3px);
-        }
-
-        .btn-outline-light:hover {
-            background-color: #0d6efd;
-            border-color: #0d6efd;
-        }
-
-        /* ---------- SECTION COMMON ---------- */
-        section {
-            padding: 90px 0;
-        }
-
-        .section-title {
-            font-size: 2.6rem;
-            font-weight: 700;
-            margin-bottom: 60px;
-            color: white;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: #0d6efd;
-            margin: 16px auto 0;
-            border-radius: 4px;
-        }
-
-        /* ---------- ABOUT ---------- */
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #cbd5e1;
-        }
-
-        .personal-tag {
-            background: #1e293b;
-            padding: 20px 25px;
-            border-radius: 18px;
-            border-left: 6px solid #0d6efd;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-
-        /* ---------- SKILLS ---------- */
-        .skill-badge {
-            background: #1e2c47;
-            color: #e2e8f0;
-            padding: 12px 24px;
-            margin: 8px;
-            border-radius: 40px;
-            font-size: 1.05rem;
-            font-weight: 500;
-            display: inline-block;
-            border: 1px solid #3a506e;
-            transition: 0.15s;
-        }
-
-        .skill-badge:hover {
-            background: #0d6efd;
-            border-color: #0d6efd;
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .skill-category h4 {
-            color: #94a3b8;
-            margin-bottom: 18px;
-            border-bottom: 1px dashed #3a506e;
-            padding-bottom: 10px;
-        }
-
-        /* ---------- EDUCATION & EXPERIENCE CARDS ---------- */
-        .edu-card, .exp-card {
-            background: #0f172a;
-            border: 1px solid #2d3a4f;
-            border-radius: 24px;
-            padding: 28px 25px;
-            height: 100%;
-            transition: all 0.25s;
-        }
-
-        .edu-card:hover, .exp-card:hover {
-            border-color: #0d6efd;
-            box-shadow: 0 12px 25px rgba(13, 110, 253, 0.2);
-            transform: translateY(-6px);
-        }
-
-        .edu-card i, .exp-card i {
-            color: #0d6efd;
-            margin-right: 10px;
-            width: 28px;
-            text-align: center;
-        }
-
-        .date-badge {
-            background: #1e3a5f;
-            color: #b6d0f0;
-            padding: 5px 14px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        /* ---------- PROJECTS — ENHANCED (CASE STYLE) ---------- */
-        .project-card {
-            background: #0f172a;
-            border: 1px solid #2d3a4f;
-            border-radius: 28px;
-            padding: 24px;
-            transition: 0.25s;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            border-color: #0d6efd;
-            box-shadow: 0 0 25px rgba(13, 110, 253, 0.4);
-            transform: translateY(-8px);
-        }
-
-        .project-icon {
-            font-size: 2.8rem;
-            color: #0d6efd;
-            margin-bottom: 10px;
-        }
-
-        .project-title {
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-        }
-
-        .project-case {
-            background: #1a2332;
-            padding: 16px;
-            border-radius: 18px;
-            margin: 18px 0 12px;
-            border-left: 4px solid #0d6efd;
-            font-size: 0.95rem;
-        }
-
-        .project-case strong {
-            color: #aad0ff;
-        }
-
-        .tech-stack {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-
-        .btn-project {
-            background: transparent;
-            border: 1.5px solid #0d6efd;
-            color: white;
-            border-radius: 30px;
-            padding: 8px 20px;
-            margin-top: 12px;
-            align-self: flex-start;
-            transition: 0.2s;
-        }
-
-        .btn-project:hover {
-            background: #0d6efd;
-            color: white;
-        }
-
-        /* ---------- FOOTER ---------- */
-        footer {
-            background-color: #0a121f;
-            border-top: 1px solid #1e3a5f;
-            padding: 32px 0;
-            color: #9aa8b9;
-        }
-
-        /* ---------- AOS CUSTOM ---------- */
-        [data-aos] {
-            pointer-events: none;
-        }
-        [data-aos].aos-animate {
-            pointer-events: auto;
-        }
-    </style>
+    <!-- Custom CSS (split) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ==================== NAVBAR (enhanced) ==================== -->
+<!-- ==================== NAVBAR ==================== -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand fw-bold fs-3" href="#">
+        <a class="navbar-brand fw-bold fs-3" href="#home">
             <i class="fas fa-brain me-2" style="color: #0d6efd;"></i>Mostafa Hamada
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -287,12 +41,14 @@
     </div>
 </nav>
 
-<!-- ==================== HERO SECTION (ID: home) ==================== -->
+<!-- ==================== HERO ==================== -->
 <section id="home" class="hero d-flex align-items-center text-center">
     <div class="container" data-aos="fade-up">
-        <img src="assets/myphoto.jpeg" class="profile-img mb-4" alt="Mostafa Hamada">
+        <div class="d-flex justify-content-center">
+            <img src="assets/myphoto.jpeg" class="profile-img mb-4" alt="Mostafa Hamada">
+        </div>
         <h1 class="display-4 fw-bold">Mostafa Hamada Hassan</h1>
-        <h3 class="text-primary" style="color: #3b82f6 !important;">AI & Data Science Engineer</h3>
+        <h3 class="text-primary">AI & Data Science Engineer</h3>
         <p class="lead mt-3 col-lg-8 mx-auto">
             Architecting intelligent systems · Computer Vision · NLP · MLOps
         </p>
@@ -308,19 +64,31 @@
     </div>
 </section>
 
-<!-- ==================== ABOUT SECTION ==================== -->
+<!-- ==================== ABOUT ==================== -->
 <section id="about" class="py-5" style="background-color: #0b1423;">
     <div class="container">
         <h2 class="section-title text-center" data-aos="fade-up">About Me</h2>
         <div class="row align-items-center g-5">
             <div class="col-lg-7" data-aos="fade-right">
                 <div class="about-text">
-                    <p class="fs-4 fw-semibold">👋 I'm Mostafa — I turn data into decisions and ideas into intelligent agents.</p>
-                    <p>I’m an AI & Data Science Engineer with a deep obsession for machine learning, computer vision, and scalable systems. I don’t just build models; I engineer end-to-end solutions that live in production. Whether it’s a distributed e‑commerce backend or a content‑based recommendation engine, I craft clean, efficient, and impactful code.</p>
-                    <p>My superpower? Bridging the gap between research-grade AI and real‑world applications. I’ve worked on threading, replication, NLP pipelines, and even CPU scheduling — I love the <strong>system</strong> behind the intelligence.</p>
+                    <p class="fs-4 fw-semibold">
+                        🚀 AI Engineer focused on building production-ready intelligent systems.
+                    </p>
+                    <p>
+                        I specialize in Machine Learning, Computer Vision, and NLP with hands-on
+                        experience in deploying scalable solutions. From distributed e-commerce
+                        systems to recommendation engines and CPU schedulers, I design systems
+                        that combine performance, reliability, and clean architecture.
+                    </p>
+                    <p>
+                        Currently expanding my expertise in MLOps, model deployment, and
+                        advanced deep learning architectures through DEPI and industry training
+                        programs with Samsung and Siemens.
+                    </p>
                     <div class="personal-tag mt-4">
                         <i class="fas fa-quote-left" style="color: #0d6efd;"></i> 
-                        Outside of coding, I’m a open‑source contributor, a tech writer at heart, and a believer that AI should be accessible. Currently diving deeper into MLOps and LLM fine‑tuning.
+                        Outside of coding, I contribute to open source, write about AI, and
+                        believe that intelligent systems should be accessible and well‑architected.
                     </div>
                 </div>
             </div>
@@ -339,7 +107,7 @@
     </div>
 </section>
 
-<!-- ==================== SKILLS SECTION ==================== -->
+<!-- ==================== SKILLS ==================== -->
 <section id="skills" style="background-color: #0f172a;">
     <div class="container">
         <h2 class="section-title text-center" data-aos="fade-up">Technical Skills</h2>
@@ -383,7 +151,6 @@
                 </div>
             </div>
         </div>
-        <!-- additional core competencies -->
         <div class="row mt-3">
             <div class="col-12 text-center" data-aos="fade-up">
                 <span class="skill-badge">Data Analytics</span>
@@ -392,132 +159,106 @@
                 <span class="skill-badge">DB Replication</span>
                 <span class="skill-badge">NLP</span>
                 <span class="skill-badge">Computer Vision</span>
-                <span class="skill-badge">Agile</span>
+                <span class="skill-badge">MLflow</span>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== EDUCATION SECTION ==================== -->
+<!-- ==================== EDUCATION (REAL) ==================== -->
 <section id="education" style="background-color: #0b1423;">
     <div class="container">
-        <h2 class="section-title text-center" data-aos="fade-up">Education & Credentials</h2>
-        <div class="row g-4">
-            <div class="col-md-6" data-aos="flip-left">
+        <h2 class="section-title text-center" data-aos="fade-up">Education</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6" data-aos="flip-left">
                 <div class="edu-card">
                     <i class="fas fa-graduation-cap fa-2x mb-3" style="color: #0d6efd;"></i>
-                    <h3 class="h4">B.Sc. in Computer Science</h3>
-                    <p class="text-primary mb-1">Cairo University · 2019 – 2023</p>
-                    <p class="text-secondary-emphasis">Graduated with Excellence (GPA: 3.8/4.0). Thesis on <strong>“Efficient Transformers for Low‑Resource NLP”</strong>.</p>
-                    <span class="date-badge"><i class="far fa-calendar-alt me-1"></i> 2019-2023</span>
-                </div>
-            </div>
-            <div class="col-md-6" data-aos="flip-left" data-aos-delay="150">
-                <div class="edu-card">
-                    <i class="fas fa-certificate fa-2x mb-3" style="color: #0d6efd;"></i>
-                    <h3 class="h4">Deep Learning Specialization</h3>
-                    <p class="text-primary mb-1">DeepLearning.AI · 2024</p>
-                    <p>5-course series covering Neural Networks, CNNs, Sequence Models, Transformers, and TensorFlow deployment.</p>
-                    <span class="date-badge"><i class="far fa-calendar-alt me-1"></i> 2024</span>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4" data-aos="flip-left" data-aos-delay="50">
-                <div class="edu-card">
-                    <i class="fas fa-cloud fa-2x mb-3" style="color: #0d6efd;"></i>
-                    <h3 class="h4">AWS Certified Cloud Practitioner</h3>
-                    <p class="text-primary mb-1">Amazon Web Services · 2025</p>
-                    <p>Foundational knowledge of cloud concepts, AWS core services, security, and architecture.</p>
-                    <span class="date-badge"><i class="far fa-calendar-alt me-1"></i> 2025</span>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4" data-aos="flip-left" data-aos-delay="200">
-                <div class="edu-card">
-                    <i class="fas fa-chart-line fa-2x mb-3" style="color: #0d6efd;"></i>
-                    <h3 class="h4">MLOps Specialization</h3>
-                    <p class="text-primary mb-1">Duke University / Coursera</p>
-                    <p>End-to-end ML pipeline, model deployment, monitoring, and CI/CD for machine learning.</p>
-                    <span class="date-badge"><i class="far fa-calendar-alt me-1"></i> 2024 (ongoing)</span>
+                    <h3 class="h4">B.Sc. in Computer & Systems Engineering</h3>
+                    <p class="text-primary mb-1">Ain Shams University · Expected June 2026</p>
+                    <p>
+                        Focused on Artificial Intelligence, Machine Learning, Embedded Systems,
+                        and Distributed Architectures.  
+                        GPA: <strong>3.0 / 4.0</strong>
+                    </p>
+                    <span class="date-badge">
+                        <i class="far fa-calendar-alt me-1"></i> 2022 – 2026
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== WORK EXPERIENCE ==================== -->
+<!-- ==================== WORK EXPERIENCE (REAL) ==================== -->
 <section id="experience" style="background-color: #0f172a;">
     <div class="container">
         <h2 class="section-title text-center" data-aos="fade-up">Work Experience</h2>
         <div class="row g-4">
-            <div class="col-lg-6" data-aos="fade-right">
+
+            <!-- Samsung SIC -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-right">
                 <div class="exp-card">
                     <div class="d-flex align-items-center mb-2">
                         <i class="fas fa-briefcase fa-2x me-3" style="color: #0d6efd;"></i>
-                        <h3 class="h4 mb-0">AI Engineering Intern</h3>
+                        <h3 class="h5 mb-0">AI Intern — Samsung Innovation Campus</h3>
                     </div>
-                    <p class="text-info mb-1">RDI · Cairo (Remote) · Jun 2024 – Sep 2024</p>
+                    <p class="text-info mb-1">Jul 2024 – Oct 2024</p>
                     <ul class="mt-3" style="color: #cbd5e1;">
-                        <li>Developed a content‑based recommendation system for e‑commerce, improving click‑through rate by 18%.</li>
-                        <li>Built TF‑IDF + Word2Vec pipelines with Flask and deployed on AWS EC2.</li>
-                        <li>Collaborated with product team to A/B test two ranking algorithms.</li>
+                        <li>Designed and implemented ML & DL models using TensorFlow and Keras.</li>
+                        <li>Worked on Computer Vision and NLP pipelines.</li>
+                        <li>Performed EDA and feature engineering to improve model accuracy.</li>
+                        <li>Presented technical results and reports to mentors.</li>
                     </ul>
                     <span class="date-badge"><i class="fas fa-calendar-alt me-1"></i> 3 months</span>
                 </div>
             </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+
+            <!-- DEPI Data Science Trainee -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="exp-card">
                     <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-laptop fa-2x me-3" style="color: #0d6efd;"></i>
-                        <h3 class="h4 mb-0">Junior Data Scientist (Freelance)</h3>
+                        <i class="fas fa-chart-line fa-2x me-3" style="color: #0d6efd;"></i>
+                        <h3 class="h5 mb-0">Data Science Trainee — DEPI (MCIT)</h3>
                     </div>
-                    <p class="text-info mb-1">Upwork / Self-employed · 2023 – present</p>
+                    <p class="text-info mb-1">Dec 2025 – June 2026</p>
                     <ul class="mt-3" style="color: #cbd5e1;">
-                        <li>Delivered 5+ end‑to‑end ML projects for international clients (NLP, sales forecasting).</li>
-                        <li>Created dashboards using Python and PowerBI for real‑time inventory insights.</li>
-                        <li>Maintained 5-star rating, 100% job success score.</li>
-                    </ul>
-                    <span class="date-badge"><i class="fas fa-calendar-alt me-1"></i> 1.5+ years</span>
-                </div>
-            </div>
-            <div class="col-lg-6 mt-3" data-aos="fade-right" data-aos-delay="50">
-                <div class="exp-card">
-                    <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-chalkboard-teacher fa-2x me-3" style="color: #0d6efd;"></i>
-                        <h3 class="h4 mb-0">Teaching Assistant (CS50)</h3>
-                    </div>
-                    <p class="text-info mb-1">Faculty of CS, Cairo University · 2022 – 2023</p>
-                    <ul class="mt-3" style="color: #cbd5e1;">
-                        <li>Led lab sessions for “Introduction to CS” (Python, C, algorithms) with 50+ students.</li>
-                        <li>Designed assignments and graded projects; mentored 3 finalist teams in the internal hackathon.</li>
-                    </ul>
-                    <span class="date-badge"><i class="fas fa-calendar-alt me-1"></i> 1 year</span>
-                </div>
-            </div>
-            <div class="col-lg-6 mt-3" data-aos="fade-left" data-aos-delay="150">
-                <div class="exp-card">
-                    <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-database fa-2x me-3" style="color: #0d6efd;"></i>
-                        <h3 class="h4 mb-0">Backend Developer (Volunteer)</h3>
-                    </div>
-                    <p class="text-info mb-1">Open Source Contribution · 2023</p>
-                    <ul class="mt-3" style="color: #cbd5e1;">
-                        <li>Contributed to Django-based platform for non-profit, implementing REST APIs and PostgreSQL replication.</li>
-                        <li>Optimized query response time by 30% through indexing and caching strategies.</li>
+                        <li>Mastered full Data Science lifecycle from SQL querying to model deployment.</li>
+                        <li>Used MLflow for experiment tracking and model versioning.</li>
+                        <li>Explored Hugging Face models and advanced deep learning architectures.</li>
                     </ul>
                     <span class="date-badge"><i class="fas fa-calendar-alt me-1"></i> 6 months</span>
+                </div>
+            </div>
+
+            <!-- Siemens Embedded -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-left" data-aos-delay="200">
+                <div class="exp-card">
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-microchip fa-2x me-3" style="color: #0d6efd;"></i>
+                        <h3 class="h5 mb-0">Embedded Systems Trainee — Siemens</h3>
+                    </div>
+                    <p class="text-info mb-1">Jul 2025 – Sept 2025</p>
+                    <ul class="mt-3" style="color: #cbd5e1;">
+                        <li>Covered Bootloader, RTOS, AUTOSAR, and SDLC concepts.</li>
+                        <li>Built hands-on labs integrating embedded theory with real implementation.</li>
+                    </ul>
+                    <span class="date-badge"><i class="fas fa-calendar-alt me-1"></i> 3 months</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== PROJECTS — ENHANCED (case studies) ==================== -->
+<!-- ==================== PROJECTS (REAL & CASE‑STYLE) ==================== -->
 <section id="projects" class="py-5" style="background-color: #0b1423;">
     <div class="container">
         <h2 class="section-title text-center" data-aos="fade-up">Featured Projects</h2>
-        <p class="text-center mb-5 text-secondary-emphasis lead" data-aos="fade-up">Real‑world systems · Measurable impact · Clean code</p>
+        <p class="text-center mb-5 text-secondary-emphasis lead" data-aos="fade-up">
+            Real‑world systems · Measurable impact · Clean code
+        </p>
 
         <div class="row g-4">
-            <!-- FlipFlow - case study -->
+            <!-- FlipFlow (public repo) -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in">
                 <div class="project-card">
                     <i class="fas fa-store project-icon"></i>
@@ -531,7 +272,8 @@
                     <a href="https://github.com/7ksha/FlipFlow-Project-" class="btn btn-project" target="_blank"><i class="fab fa-github me-1"></i> GitHub</a>
                 </div>
             </div>
-            <!-- SteamMatch - case study -->
+
+            <!-- SteamMatch (from CV) -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
                 <div class="project-card">
                     <i class="fas fa-gamepad project-icon"></i>
@@ -542,10 +284,11 @@
                         <strong>📈 Outcome:</strong> 84% precision@10 on Steam dataset, deployed as API.
                     </div>
                     <p class="tech-stack"><i class="fas fa-wrench"></i> Python · NLP · scikit‑learn · Word2Vec · Flask</p>
-                    <a href="https://github.com/7ksha?tab=repositories" class="btn btn-project" target="_blank"><i class="fab fa-github me-1"></i> GitHub</a>
+                    <a href="https://github.com/7ksha?tab=repositories" class="btn btn-project" target="_blank"><i class="fab fa-github me-1"></i> Repo</a>
                 </div>
             </div>
-            <!-- CPU Scheduler Simulator - case study -->
+
+            <!-- CPU Scheduler Simulator (public repo) -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
                 <div class="project-card">
                     <i class="fas fa-microchip project-icon"></i>
@@ -559,50 +302,9 @@
                     <a href="https://github.com/7ksha/CPU-Scheduler-Simulator" class="btn btn-project" target="_blank"><i class="fab fa-github me-1"></i> GitHub</a>
                 </div>
             </div>
-            <!-- additional project 1: YOLO-based object detection (hypothetical) -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="0">
-                <div class="project-card">
-                    <i class="fas fa-eye project-icon"></i>
-                    <h3 class="project-title">DroneVision</h3>
-                    <div class="project-case">
-                        <strong>📌 Challenge:</strong> Real‑time vehicle detection from drone footage.<br>
-                        <strong>⚙️ Solution:</strong> Fine‑tuned YOLOv8 on VisDrone, TensorRT optimization.<br>
-                        <strong>📈 Outcome:</strong> 31 FPS on edge device, 89% mAP.
-                    </div>
-                    <p class="tech-stack"><i class="fas fa-wrench"></i> Python · YOLOv8 · OpenCV · TensorRT</p>
-                    <a href="https://github.com/7ksha?tab=repositories" class="btn btn-project" target="_blank"><i class="fab fa-github me-1"></i> Code</a>
-                </div>
-            </div>
-            <!-- additional project 2: Sentiment analysis dashboard -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="project-card">
-                    <i class="fas fa-chart-pie project-icon"></i>
-                    <h3 class="project-title">TweetSense</h3>
-                    <div class="project-case">
-                        <strong>📌 Challenge:</strong> Brand monitoring via Twitter sentiment.<br>
-                        <strong>⚙️ Solution:</strong> Fine‑tuned BERT + interactive Dash dashboard.<br>
-                        <strong>📈 Outcome:</strong> 92% accuracy, deployed on Heroku.
-                    </div>
-                    <p class="tech-stack"><i class="fas fa-wrench"></i> Python · Transformers · Dash · Plotly</p>
-                    <a href="https://github.com/7ksha?tab=repositories" class="btn btn-project" target="_blank"><i class="fab fa-github me-1"></i> GitHub</a>
-                </div>
-            </div>
-            <!-- additional project 3: MLOps pipeline demo -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="project-card">
-                    <i class="fas fa-infinity project-icon"></i>
-                    <h3 class="project-title">MLOps Starter</h3>
-                    <div class="project-case">
-                        <strong>📌 Challenge:</strong> End‑to‑end ML lifecycle with CI/CD.<br>
-                        <strong>⚙️ Solution:</strong> Docker, GitHub Actions, MLflow, FastAPI.<br>
-                        <strong>📈 Outcome:</strong> Automated retraining & model versioning.
-                    </div>
-                    <p class="tech-stack"><i class="fas fa-wrench"></i> Docker · MLflow · FastAPI · CI/CD</p>
-                    <a href="https://github.com/7ksha?tab=repositories" class="btn btn-project" target="_blank"><i class="fab fa-github me-1"></i> Repo</a>
-                </div>
-            </div>
         </div>
-        <!-- link to all repositories -->
+
+        <!-- Link to all repositories -->
         <div class="text-center mt-5" data-aos="fade-up">
             <a href="https://github.com/7ksha?tab=repositories" class="btn btn-outline-primary btn-lg" target="_blank">
                 <i class="fab fa-github me-2"></i> View all on GitHub
@@ -627,7 +329,7 @@
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- AOS Animation init -->
+<!-- AOS Animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({
