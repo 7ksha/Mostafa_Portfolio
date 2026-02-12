@@ -1,5 +1,4 @@
-/* ==================== style.css ==================== */
-/* Global Dark Theme & Typography */
+/* ---------- GLOBAL ---------- */
 body {
     background-color: #0f172a;
     color: #f1f5f9;
@@ -7,7 +6,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* ---------- Navbar (glassmorphism) ---------- */
+/* ---------- NAVBAR ---------- */
 .navbar {
     background: rgba(10, 25, 47, 0.85);
     backdrop-filter: blur(8px);
@@ -29,13 +28,13 @@ body {
     color: #0d6efd !important;
 }
 
-/* ---------- Hero & Profile Image (professional AI glow) ---------- */
+/* ---------- HERO ---------- */
 .hero {
-    height: 100vh;
-    background: radial-gradient(circle at 70% 30%, #1a2a44, #0b1622);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: radial-gradient(circle at 70% 30%, #1a2a44, #0b1622);
 }
 
 .profile-img {
@@ -73,7 +72,11 @@ body {
     border-color: #0d6efd;
 }
 
-/* ---------- Section Titles (with underline) ---------- */
+/* ---------- SECTIONS ---------- */
+section {
+    padding: 90px 0;
+}
+
 .section-title {
     font-size: 2.6rem;
     font-weight: 700;
@@ -92,7 +95,11 @@ body {
     border-radius: 4px;
 }
 
-/* ---------- About Section ---------- */
+/* ---------- ABOUT ---------- */
+#about {
+    background-color: #0b1423;
+}
+
 .about-text {
     font-size: 1.2rem;
     line-height: 1.8;
@@ -107,7 +114,22 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* ---------- Skills (badge style) ---------- */
+.quick-facts {
+    background: #132135;
+    padding: 28px 25px;
+    border-radius: 24px;
+    border: 1px solid #2d3a4f;
+}
+
+.quick-facts h4 {
+    margin-bottom: 20px;
+}
+
+/* ---------- SKILLS ---------- */
+#skills {
+    background-color: #0f172a;
+}
+
 .skill-badge {
     background: #1e2c47;
     color: #e2e8f0;
@@ -135,7 +157,15 @@ body {
     padding-bottom: 10px;
 }
 
-/* ---------- Education & Experience Cards ---------- */
+/* ---------- EDUCATION & EXPERIENCE CARDS ---------- */
+#education {
+    background-color: #0b1423;
+}
+
+#experience {
+    background-color: #0f172a;
+}
+
 .edu-card, .exp-card {
     background: #0f172a;
     border: 1px solid #2d3a4f;
@@ -169,7 +199,20 @@ body {
     margin-top: 10px;
 }
 
-/* ---------- Project Cards (case study style) ---------- */
+.exp-card ul {
+    color: #cbd5e1;
+    padding-left: 1.2rem;
+}
+
+.exp-card li {
+    margin-bottom: 8px;
+}
+
+/* ---------- PROJECTS ---------- */
+#projects {
+    background-color: #0b1423;
+}
+
 .project-card {
     background: #0f172a;
     border: 1px solid #2d3a4f;
@@ -227,6 +270,7 @@ body {
     margin-top: 12px;
     align-self: flex-start;
     transition: 0.2s;
+    text-decoration: none;
 }
 
 .btn-project:hover {
@@ -234,10 +278,19 @@ body {
     color: white;
 }
 
-/* ---------- Footer ---------- */
+/* ---------- FOOTER ---------- */
 footer {
     background-color: #0a121f;
     border-top: 1px solid #1e3a5f;
     padding: 32px 0;
     color: #9aa8b9;
+}
+
+footer a {
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+footer a:hover {
+    opacity: 0.8;
 }
