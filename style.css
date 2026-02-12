@@ -254,13 +254,14 @@ section {
 .project-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 30px;
-    padding: 26px;
+    border-radius: 24px;     /* was 30px */
+    padding: 22px;           /* was 26px */
     transition: 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
+
 
 .project-card:hover {
     border-color: var(--accent);
@@ -269,22 +270,22 @@ section {
 }
 
 .project-icon {
-    font-size: 2.6rem;
     color: var(--accent);
-    margin-bottom: 12px;
+    font-size: 2.3rem;   /* was 2.6rem */
+    margin-bottom: 10px; /* was 12px */
 }
 
 .project-title {
     font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 14px;
+    font-size: 1.3rem;   /* was 1.4rem */
+    margin-bottom: 12px; /* was 14px */
 }
 
 .project-case {
     background: #172234;
-    padding: 18px;
+    padding: 16px;
     border-radius: 20px;
-    margin: 20px 0;
+    margin: 16px 0;
     border-left: 4px solid var(--accent);
     font-size: 0.95rem;
     line-height: 1.6;
