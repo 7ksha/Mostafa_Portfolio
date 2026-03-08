@@ -73,7 +73,7 @@
 
 ---
 
-# 3. Cost Breakdown Structure (CBS)
+# 2. Cost Breakdown Structure (CBS)
 
 Estimated project costs (example values).
 
